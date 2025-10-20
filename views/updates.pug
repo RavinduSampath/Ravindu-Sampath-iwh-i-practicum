@@ -1,0 +1,20 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/css/style.css')
+  body
+    .form-container
+      h1= title
+      form(action='/update-cobj' method='POST')
+        .form-group
+          label(for='book_records') Book Name:
+          input(type='text' name='book_records' placeholder='Enter book name' required)
+        .form-group
+          label(for='author') Author:
+          input(type='text' name='author' placeholder='Enter author name' required)
+        .form-group
+          label(for='genre') Genre:
+          input(type='text' name='genre' placeholder='Enter genre' required)
+        button.btn(type='submit') Submit
+      a.back-link(href='/') ← Return to homepage

@@ -1,0 +1,24 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/css/style.css')
+  body
+    .container
+      h1 Book Records
+      a.btn(href='/update-cobj') + Add a New Book
+      if data && data.length
+        table
+          thead
+            tr
+              th Author
+              th Genre
+              th Book Name
+          tbody
+            each item in data
+              tr
+                td= item.properties.author
+                td= item.properties.genre
+                td= item.properties.book_records
+      else
+        p.no-data No records found. Please add a new book.
